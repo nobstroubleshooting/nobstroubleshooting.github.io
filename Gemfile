@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-
+gem "json"
 # if you are using other than GitHub Pages,
 #gem "jekyll", "~> 3.9.0", group: :jekyll_plugins
 
@@ -23,6 +23,5 @@ end
 
 # Performance-booster for watching directories on Windows
 gem "wdm", "~> 0.1.0", :install_if => Gem.win_platform?
-
 # HTTP server for local tests
 gem "webrick", "~> 1.7"
