@@ -171,7 +171,7 @@ privacy-policy:
 
 # constants to be replaced for
 constants:
-  greetings: Welcome to my blog about troubleshooting
+  greetings: A blog about troubleshooting and tutorials.
   welcome: Welcome
   sample: ''
 
