@@ -7,6 +7,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="bCcw_nq90G47yp0N6CA1YsMg5ugKwhNjOED_SY_CO-k" />
 {% assign page_title = page.title | default: site.data.lang[lng][page.layout].title -%}
 {%- include util/auto-content-post-title-rename.liquid title = page_title -%}
 {%- capture page_title_tag -%} {{ site.data.owner[lng].brand }} - {{ page_title }} {%- endcapture -%}
@@ -26,6 +27,7 @@
 {%- endif -%}
 
 {%-comment-%} Standard icons {%-endcomment%}
+
 <link rel="shortcut icon" href="{{ site.baseurl }}/assets/img/favicons/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/assets/img/favicons/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/assets/img/favicons/favicon-16x16.png">
