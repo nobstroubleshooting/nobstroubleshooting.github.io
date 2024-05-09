@@ -46,41 +46,30 @@ A sample scenario that really did happen, an example of what could be wrong, and
 
 ### Identifing the problem
 
-It's 4:55 PM on a Friday afternoon, you head out of the office and are on the freeway.
-You're on call, and your phone rings. The automated system asks you to press 1 to receive a message. Production is down.
-You throw your phone on the seat, and quietly rage.  You turn around and head back in the office.
+So, picture this: it’s almost 5 PM on a Friday, You're cruising down the freeway, all set for the weekend. Suddenly, your phone starts buzzing like crazy. An automated voice tells me to press 1 for a message. It’s bad news – production is down. Cue the internal frustration and a swift U-turn back to the office.
 
-Production is down, anyone trying to access the site is given a 50x. This is where the investigation begins
+Yep, you guessed it. The site’s throwing a 50x error at anyone who dares to visit. And just like that, the weekend plans are on hold while we dive deep into the investigation.
 
 #### Understanding the issue
-When a web server is displaying a 50x problem, it indicates a problem with the application. The first step you should
-do if you're anything like me is to breathe, unless this is an extended outage, you will have time to investigate. Many times
-people will hound you and continually ask for a status. Give them a short answer and continue to investigate. Don't let outside
-stress get the best of you, it only drags out the process of troubleshooting and implementing a fix.
+You are confronted with a 50x error from your web server. It may initially incite panic. However, it's crucial to maintain composure. Take a moment to collect yourself; unless it's a dire situation, there's time to address the issue. Expect inquiries from concerned parties seeking updates; provide a brief status update and proceed with troubleshooting.
 
-Always review logs, I cannot stress this enough. They usually give helpful information on what could be the cause of 
-a problem. Try to watch the log in real time while reproducing the issue. In Linux you can use tail -f *.log and in Windows
-you can fire up powershell and run Get-Content logfile.log -Wait. You will be able to see your request in the application
-log and what error you get. 
+The cardinal rule in such scenarios is to review the logs. These logs serve as invaluable guides in navigating troubleshooting sessions. Utilize tools like the Linux terminal or Windows PowerShell to monitor logs in real-time. This enables quick identification of requests and any associated errors.
 
-Is it complaining about the database? Or is it a code issue? Were there any deployments that 
-were done at the worst possible time, such as Friday right before the weekend? Understanding the circumstances can help you narrow down the problem.
+Subsequently, embark on a fact-finding mission. Determine whether the issue stems from database malfunctions, code discrepancies, or recent deployments. A nuanced understanding of the circumstances facilitates targeted problem-solving.
 
-A code deployment can break in the worst way. If a deployment did happen and things went awry you can lean towards
-a problem with the deployment. Don't jump to a conclusion, just keep it in your file as you continue to troubleshoot.
+In the event of a deployment mishap, resist the urge to assign blame prematurely. Instead, maintain focus on resolution. Keep deployment-related factors in mind as you delve deeper into the issue. Remember, there's often more to uncover in the intricate landscape of code troubleshooting.
 
 ### Gathering information
-Investigating the log, you see an error. It is a stacktrace and it seems to be complaining about the database. Good,
-you know that there's a problem with the application and the database. The exception seems to indicate a missing field
-in the database that the application is looking for. It's time to find your nearest application developer and bring him
-on the call. Application deployments sometimes require database migrations and if a field was missed or the database wasn't migrated
-you can run into an issue like the one above.
+As you look into the logs, a glaring error catches your eye: a detailed stack trace hinting at a database issue. This discovery solidifies the understanding that both the application and the database are at the heart of the problem.
+
+Specifically, the error message suggests a missing database field that the application is seeking. This realization prompts the next strategic move: enlist the expertise of an application developer.
+
+In the realm of application deployments, database migrations often play a pivotal role. Oversights in migration processes, such as skipping essential fields, can readily lead to the sort of issue we're currently facing. It's imperative to collaborate with a developer to unravel this puzzle.
 
 ### Sharing information
-When you do find a problem in the log, determine if it's in your domain or if it's another teams issue. If it's a stack
-trace that indicates a problem with the application, the applicable developer should be consulted. 
+Upon uncovering an issue within the logs, it's crucial to discern whether it falls within your realm of responsibility or if it pertains to another team's domain. Should the error manifest as a stack trace of an application malfunction, it's prudent to engage the relevant developer for consultation.
 
-Do not play the blame game, instead keep the problem as blameless as possible, don't point fingers as you will do everyone a disservice. Instead, be diplomatic and remain calm.
+In addressing such challenges, it's imperative to avoid the temptation of assigning blame. Adopting a blameless approach not only fosters a collaborative environment but also prevents unnecessary friction. Instead, maintain a diplomatic demeanor and prioritize problem-solving with composure.
 
 ### Troubleshooting Summary
 The scenario follows these basic troubleshooting steps:
