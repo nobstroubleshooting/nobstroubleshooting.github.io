@@ -57,7 +57,7 @@ The cardinal rule in such scenarios is to review the logs. These logs serve as i
 
 Subsequently, embark on a fact-finding mission. Determine whether the issue stems from database malfunctions, code discrepancies, or recent deployments. A nuanced understanding of the circumstances facilitates targeted problem-solving.
 
-In the event of a deployment mishap, resist the urge to assign blame prematurely. Instead, maintain focus on resolution. Keep deployment-related factors in mind as you delve deeper into the issue. Remember, there's often more to uncover in the intricate landscape of code troubleshooting.
+In the event of a deployment mishap, resist the urge to assign blame prematurely. Instead, maintain focus on resolution. Keep deployment-related factors in mind as you look deeper into the issue. Remember, there's often more to uncover in the intricate landscape of code troubleshooting.
 
 ### Gathering information
 As you look into the logs, a glaring error catches your eye: a detailed stack trace hinting at a database issue. This discovery solidifies the understanding that both the application and the database are at the heart of the problem.
