@@ -95,7 +95,7 @@ compress_html:
   blanklines: false
   ignore:
     # disable this feature for development env.
-    envs: [development]
+    #envs: [development]
 
 ###########################################################
 # js compression (for removing comments(/**/only), line breaks and spaces)
